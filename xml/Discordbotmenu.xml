@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say>Welcome to the Discord Bot voice menu. Press 1 for option 1. Press 2 for option 2. Press 3 for option 3.</Say>
+    <Gather numDigits="1" action="/process-menu-choice" method="POST">
+        <Say>To select an option, press a number on your keypad.</Say>
+    </Gather>
+</Response>

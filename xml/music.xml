@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <Response>
+      <Pause length="3"/>
+    <Gather numDigits="1" action="/mrotp/handle-music.xml" method="POST">
+ 	<Say>Thank you! You have successfully secured your account. For any further assistance please press 1 to speak to a representative. If you are satisfied please hang up. </Say>
+      <Pause length="3"/>
+      	<Say>GOODBYE!</Say>
+    </Gather>
+ 	</Response>

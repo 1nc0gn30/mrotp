@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+ 	<Pause length="5"/>
+     <Say>Thank you for verifying your account.</Say>
+  <Gather numDigits="1" action="/mrotp/handle-option.xml" method="POST , GET">
+     <Say>To allow access from unknown device "Jeffereys IPhone" please press 1, to deny access from unknown device "Jeffereys IPhone" please press 2, to deny and block all requests for any future actions from unknown device "Jeffereys IPhone" please press 3. </Say>
+  </Gather>
+</Response>
